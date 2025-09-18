@@ -1,0 +1,125 @@
+<!-- 
+  In this file, we try to make buttons, and style them
+  using CSS. 
+  In style tag, we can write CSS codes :D
+
+  General technique: 
+    1. Create element with HTML
+    2. Style with CSS one-by-one
+
+  CSS Syntax Rule: 
+  * Buttons Style: 
+    CSS Selector (button):
+      it tells what we are changing. 
+      the text inside is the property that we can change:
+      like we change the property of background color to red
+      you end the properties in style with ;
+* Features: 
+   background color -> rgb: another way to choose a color (red, green, blue)
+   text color
+   border
+   height -> in pixcels
+   width
+   corners
+   space -> margin
+
+   * HTML attribute: 
+   - class: Lets us label the html element
+---------------------------------------
+  * Hovers, Transitions, Shadows:
+    Hover: when your cursor goes on it and it changes its style
+      Know as pseudo-class -> changes style in certain situations
+        Ex: :hover, :active -> when you click the button
+
+  * Features: 
+    Opacity: a number between 0 to 1 that fades the element
+    as you decrese it more, it fades out more
+
+    transition: makes it smooth, takes 2 values. 
+
+    box-shadow: takes 4 values. right down blur color
+---------------------------------------
+
+  
+-->
+
+<style>
+  .subscribe-button {
+    background-color: rgb(200, 0, 0);
+    color: white; 
+    border: none;
+    height: 33px; 
+    width: 110px;
+    border-radius: 2px;
+    cursor: pointer; 
+    margin-right: 9px; 
+    transition: opacity 0.15s;
+  }
+
+  .subscribe-button:hover {
+    opacity: 0.8;
+  }
+
+  .subscribe-button:active {
+    opacity: 0.4;
+  }
+
+  .join-button{
+    background-color: white;
+    color: rgb(55, 84, 218);
+    border-color: rgb(37, 67, 197);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    height: 33px; 
+    width: 62px;
+    cursor: pointer;
+    margin-right: 9px; 
+    transition: opacity 1s, color 0.3s;
+  }
+
+  .join-button:hover{
+    background-color: rgb(55, 84, 218);
+    color: white;
+    border: none;
+  }
+
+  .join-button:active{
+    transition: opacity 0.3;
+  }
+
+  .tweet-button{
+    background-color: rgb(47, 149, 232);
+    color: white; 
+    width: 67px; 
+    height: 33px; 
+    border-radius: 20px; 
+    border: none; 
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+  }
+
+  .tweet-button:hover {
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.18);
+  }
+
+  .tweet-button:active {
+    opacity: 0.3;
+  }
+
+
+</style>
+
+<button class="subscribe-button"> 
+  SUBSCRIBE 
+</button>
+
+<button class="join-button">
+  JOIN
+</button>
+
+<button class="tweet-button"> 
+  Tweet
+</button>
